@@ -39,6 +39,13 @@ public class Playlist {
         desertIslandPlaylist.remove(1);
         desertIslandPlaylist.remove(0);
 
+        int songA = desertIslandPlaylist.indexOf("Enya - Only Time");
+        int songB = desertIslandPlaylist.indexOf("Linkin Park - Numb");
+
+        String tempA = desertIslandPlaylist.get(songA);
+        desertIslandPlaylist.set(songA, desertIslandPlaylist.get(songB));
+        desertIslandPlaylist.set(songB, tempA);
+
     }
 
     public void playSongs() {
